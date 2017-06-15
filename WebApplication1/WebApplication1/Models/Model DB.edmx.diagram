@@ -5,7 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e5cb9cbdd0fe4ea291168c9062ca3046" Name="Diagram1" >
-        <EntityTypeShape EntityType="Model_x0020_DB.KKHObject" Width="1.5" PointX="2.875" PointY="0.625" />
+        <EntityTypeShape EntityType="Model_x0020_DB.KKHObject" Width="1.5" PointX="3" PointY="0.5" />
+        <EntityTypeShape EntityType="Model_x0020_DB.KKHRoom" Width="1.5" PointX="3" PointY="2.875" />
+        <EntityTypeShape EntityType="Model_x0020_DB.KKHBed" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="Model_x0020_DB.KKHSystem" Width="1.5" PointX="6.125" PointY="0.5" />
+        <InheritanceConnector EntityType="Model_x0020_DB.KKHRoom" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

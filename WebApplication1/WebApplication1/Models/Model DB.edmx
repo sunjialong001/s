@@ -14,12 +14,44 @@
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model_x0020_DB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="Model_x0020_DBContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="KKHObjectSet" EntityType="Model_x0020_DB.KKHObject" />
+          <EntitySet Name="KKHBedSet" EntityType="Model_x0020_DB.KKHBed" />
+          <EntitySet Name="KKHSystemSet" EntityType="Model_x0020_DB.KKHSystem" />
         </EntityContainer>
         <EntityType Name="KKHObject">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Isactive" Type="String" Nullable="false" />
+          <Property Name="Timecreate" Type="String" Nullable="false" />
+          <Property Name="Timemodify" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KKHRoom" BaseType="Model_x0020_DB.KKHObject">
+          <Property Name="Roomnumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Roomtype" Type="String" Nullable="false" />
+          <Property Name="Bedsnumber" Type="String" Nullable="false" />
+          <Property Name="Timeclosed" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KKHBed">
+          <Key>
+            <PropertyRef Name="Bednumber" />
+          </Key>
+          <Property Name="Bednumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Patientnumber" Type="String" Nullable="false" />
+          <Property Name="Arztnumber" Type="String" Nullable="false" />
+          <Property Name="Pflegernumber" Type="String" Nullable="false" />
+          <Property Name="Therapeutnumber" Type="String" Nullable="false" />
+          <Property Name="Timein" Type="String" Nullable="false" />
+          <Property Name="Timeout" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KKHSystem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Person" Type="String" Nullable="false" />
+          <Property Name="Room" Type="String" Nullable="false" />
+          <Property Name="Localcase" Type="String" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
