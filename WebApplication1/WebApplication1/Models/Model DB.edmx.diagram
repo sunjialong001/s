@@ -10,6 +10,8 @@
         <EntityTypeShape EntityType="Model_x0020_DB.KKHBed" Width="1.5" PointX="3" PointY="5" />
         <EntityTypeShape EntityType="Model_x0020_DB.KKHSystem" Width="1.5" PointX="6.125" PointY="0.5" />
         <InheritanceConnector EntityType="Model_x0020_DB.KKHRoom" />
+        <EntityTypeShape EntityType="Model_x0020_DB.KKHPerson" Width="1.5" PointX="0.625" PointY="2.625" />
+        <EntityTypeShape EntityType="Model_x0020_DB.Employee" Width="1.5" PointX="0.625" PointY="5.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
